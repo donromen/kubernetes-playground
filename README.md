@@ -1,6 +1,6 @@
 # Kubernetes
 
-Список чтения
+Dictionary :)
  * https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes
  * http://kubernetes.io/docs/getting-started-guides/kubeadm/
  * https://github.com/kubernetes/kubernetes/issues/34101
