@@ -19,15 +19,30 @@ Vagrant.configure("2") do |config|
     #
     # define slave-1 node
     #
-    config.vm.define "slave1" do |box|
+    config.vm.define "node1" do |box|
         box.vm.box = "ubuntu/xenial64"
         box.vm.provider :virtualbox do |v|
-            v.memory = 2048
+            v.memory = 512
             v.cpus = 1
         end
 
-        box.vm.hostname = "slave1"
+        box.vm.hostname = "node1"
         box.vm.network "private_network", ip: "192.168.50.11"
+        box.vm.provision "shell", path: "bootstrap.sh"
+    end
+
+    #
+    # define slave-1 node
+    #
+    config.vm.define "node1" do |box|
+        box.vm.box = "ubuntu/xenial64"
+        box.vm.provider :virtualbox do |v|
+            v.memory = 512
+            v.cpus = 1
+        end
+
+        box.vm.hostname = "node2"
+        box.vm.network "private_network", ip: "192.168.50.12"
         box.vm.provision "shell", path: "bootstrap.sh"
     end
 

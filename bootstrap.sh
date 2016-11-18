@@ -14,7 +14,8 @@ EOF
 cat <<EOF > /etc/hosts
 127.0.0.1	localhost
 192.168.50.2 master
-192.168.50.11 slave1
+192.168.50.11 node1
+192.168.50.12 node2
 EOF
 
 # tune the rest
