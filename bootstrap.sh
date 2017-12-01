@@ -16,6 +16,7 @@ cat <<EOF > /etc/hosts
 192.168.50.2 master
 192.168.50.11 node1
 192.168.50.12 node2
+192.168.50.13 node3
 EOF
 
 # tune the rest
